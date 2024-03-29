@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1176,2209" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1098,1554" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -89,7 +89,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="496,2144" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="496,1489" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtWorkItems" />
       <Variable x:TypeArguments="x:String" Name="strEmail" />
@@ -111,20 +111,31 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Cre-ACME" CacheStrategy="None" DisplayName="ACME 계정정보 | Get Credential" FolderPath="4sooha4@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="434,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPW]" Username="[strEmail]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\InitAllSettings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">
-          <Literal x:TypeArguments="x:String">Data\Config.xlsx</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">
-          <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;Settings&quot;,&quot;Constants&quot;}" />
-        </InArgument>
-        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">
-          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="dicConfig" />
-        </OutArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <Assign sap2010:Annotation.AnnotationText="사용되는 변수를 소스안에서 생성해서 사용하면 유지보수 시 소스자체를&#xD;&#xA; &#xD;&#xA;컴피그 파일로 정보를 만들어서 딕션어리로 만들어서 사용??&#xD;&#xA;&#xD;&#xA;C:\Users\ICT CoC\Documents\UiPath\001_ACME\Data\Config 엑셀파일&#xD;&#xA;&#xD;&#xA;큐에 접근할이름, 로그찍을 내용?? 뭐 이런 것들을 ???&#xD;&#xA;&#xD;&#xA;에셋에서 정보를 가져올 수 없거나, 현업과 이야기된 경우&#xD;&#xA;&#xD;&#xA;Settings 시트&#xD;&#xA;Name 이 키&#xD;&#xA;Value 값&#xD;&#xA;&#xD;&#xA;excel|explore|chrome|msedge&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;구글드라이브 ???&#xD;&#xA;https://docs.google.com/document/d/1rTIlsbx_SnhvbUMssJcC9jX0ynIylqLBuUr54xCEGI0/edit&#xD;&#xA;&#xD;&#xA;컴피그를 활용하면 편하게 변수를 관리할 수 있음&#xD;&#xA;&#xD;&#xA;Constants&#xD;&#xA;DelayShort. 1000 밀리 세컨드&#xD;&#xA;AccuracyMedium 0.8 ?? 정확도?? 못들었다 ㅠㅠ&#xD;&#xA;&#xD;&#xA;밸류 하나만 쓸때&#xD;&#xA;dicConfig(&quot;ACME_Url&quot;).ToString&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;일반적으로 딕션어리 컴피그를 모두 들고 들어옴&#xD;&#xA;in_dicConfig 입력 형식변경," sap:VirtualizedContainerService.HintSize="434,689" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,65" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,221" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\InitAllSettings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings","Constants"}]</InArgument>
+              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[dicConfig]</OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Assign sap2010:Annotation.AnnotationText="사용되는 변수를 소스안에서 생성해서 사용하면 유지보수 시 소스자체를&#xA; &#xA;컴피그 파일로 정보를 만들어서 딕션어리로 만들어서 사용??&#xA;&#xA;C:\Users\ICT CoC\Documents\UiPath\001_ACME\Data\Config 엑셀파일&#xA;&#xA;큐에 접근할이름, 로그찍을 내용?? 뭐 이런 것들을 ???&#xA;&#xA;에셋에서 정보를 가져올 수 없거나, 현업과 이야기된 경우&#xA;&#xA;Settings 시트&#xA;Name 이 키&#xA;Value 값&#xA;&#xA;excel|explore|chrome|msedge&#xA;&#xA;&#xA;구글드라이브 ???&#xA;https://docs.google.com/document/d/1rTIlsbx_SnhvbUMssJcC9jX0ynIylqLBuUr54xCEGI0/edit&#xA;&#xA;컴피그를 활용하면 편하게 변수를 관리할 수 있음&#xA;&#xA;Constants&#xA;DelayShort. 1000 밀리 세컨드&#xA;AccuracyMedium 0.8 ?? 정확도?? 못들었다 ㅠㅠ&#xA;&#xA;밸류 하나만 쓸때&#xA;dicConfig(&quot;ACME_Url&quot;).ToString&#xA;&#xA;&#xA;일반적으로 딕션어리 컴피그를 모두 들고 들어옴&#xA;in_dicConfig 입력 형식변경," sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strACME_Url]</OutArgument>
       </Assign.To>
@@ -133,7 +144,7 @@
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
@@ -154,14 +165,14 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Jobs\02_ACME_WI진입.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Jobs\02_ACME_WI진입.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strACME_Url">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strACME_Url" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strACME_Url">[strACME_Url]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Jobs\03_ACME_WI_전체DT추출.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Jobs\03_ACME_WI_전체DT추출.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtWorkItems">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtWorkItems" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Jobs\04_ACME_Client정보추출.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Jobs\04_ACME_Client정보추출.xaml">

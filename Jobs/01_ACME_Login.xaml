@@ -16,7 +16,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1176,2272</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1098,2439</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_01_ACME_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -121,7 +121,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_01_ACME_Login" sap:VirtualizedContainerService.HintSize="652,2207" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_01_ACME_Login" sap:VirtualizedContainerService.HintSize="652,2374" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,13 +135,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="선택기에서 title 와일드 카드로 변경" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="590,2006" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e45e04bc-f47f-447d-a67f-968ce85d908d" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="선택기에서 title 와일드 카드로 변경" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="590,2173" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e45e04bc-f47f-447d-a67f-968ce85d908d" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="556,1718" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="556,1885" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="bl로그아웃버튼" />
             </Sequence.Variables>
@@ -185,9 +185,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NCheckState DisplayName="Check App State 'Log Out'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,654" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="e45e04bc-f47f-447d-a67f-968ce85d908d" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Log Out'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,821" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="e45e04bc-f47f-447d-a67f-968ce85d908d" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="450,397" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="타겟이 나타남" sap:VirtualizedContainerService.HintSize="450,524" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,10 +195,11 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="388,197" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e45e04bc-f47f-447d-a67f-968ce85d908d" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" DesignTimeRectangle="1465, 157, 80, 50" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="91d07dd3-5551-4886-a91c-fb4a3f8c5d85" ImageBase64="" InformativeScreenshot="cc593b32adf1a6557dc25111b12da4c5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" DesignTimeRectangle="1465, 157, 80, 50" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="91d07dd3-5551-4886-a91c-fb4a3f8c5d85" ImageBase64="" InformativeScreenshot="cc593b32adf1a6557dc25111b12da4c5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="388,110" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="https://acme-test.uipath.com/login" />
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,130" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://acme-test.uipath.com/login" Version="V3" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
@@ -220,7 +221,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="494,130" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="494,130" sap2010:WorkflowViewState.IdRef="Delay_1" />
             <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="브라우저 스코프 윈도우셀렉터 뿐만아니라&#xA;type into는 자신만의 윈도우셀렉터도 활용" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="494,300" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="e45e04bc-f47f-447d-a67f-968ce85d908d" Text="[in_strEmail]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" DesignTimeRectangle="468, 454, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ' aaname='Email:' /&gt;" Guid="4c851016-e668-43c6-ac25-ec21aaff7fd8" ImageBase64="" InformativeScreenshot="e834352e13b8cff0b70e357d481ff308.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />

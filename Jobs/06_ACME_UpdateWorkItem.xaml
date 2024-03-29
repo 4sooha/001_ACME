@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1176,3976</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1098,3913</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_06_ACME_UpdateWorkItem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="AS-IS 현업요청&#xD;&#xA;TO-BE 내가 다시 설계&#xD;&#xA;" DisplayName="_06_ACME_UpdateWorkItem_self" sap:VirtualizedContainerService.HintSize="766,3911" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="AS-IS 현업요청&#xA;TO-BE 내가 다시 설계&#xA;" DisplayName="_06_ACME_UpdateWorkItem_self" sap:VirtualizedContainerService.HintSize="766,3848" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,14 +134,31 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[in_dtWorkItems]" DisplayName="6번만 테스트 할 때 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="704,128" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="dt_WorkItems 결과" WorkbookPath="excel_data\WI_DT.xlsx">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="704,65" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,196" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[in_dtWorkItems]" DisplayName="6번만 테스트 할 때 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="354,111" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="dt_WorkItems 결과" WorkbookPath="excel_data\WI_DT.xlsx">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ReadRange>
+        </Sequence>
+      </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:ReadRange>
+    </ui:CommentOut>
     <ui:FilterDataTable DataTable="[in_dtWorkItems]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="704,201" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[in_dtWorkItems]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
