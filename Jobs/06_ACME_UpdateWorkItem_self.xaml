@@ -1,14 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_06_ACME_UpdateWorkItem_self" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_06_ACME_UpdateWorkItem" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_dtWorkItems" Type="InArgument(sd:DataTable)" />
   </x:Members>
-  <this:_06_ACME_UpdateWorkItem_self.in_dtWorkItems>
+  <this:_06_ACME_UpdateWorkItem.in_dtWorkItems>
     <InArgument x:TypeArguments="sd:DataTable" />
-  </this:_06_ACME_UpdateWorkItem_self.in_dtWorkItems>
+  </this:_06_ACME_UpdateWorkItem.in_dtWorkItems>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1176,3976</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1165,2124</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_06_ACME_UpdateWorkItem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,14 +119,13 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="AS-IS 현업요청&#xD;&#xA;TO-BE 내가 다시 설계&#xD;&#xA;" DisplayName="_06_ACME_UpdateWorkItem_self" sap:VirtualizedContainerService.HintSize="766,3911" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_06_ACME_UpdateWorkItem" sap:VirtualizedContainerService.HintSize="704,2059" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="704,65" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ACME_UpdateWorkItem 시작 &gt;&gt;&gt;&gt;&gt;&gt;&gt; &quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,65" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ACME_UpdateWorkItem 시작 &gt;&gt;&gt;&gt;&gt;&gt;&gt; &quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -134,15 +133,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[in_dtWorkItems]" DisplayName="6번만 테스트 할 때 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="704,128" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="dt_WorkItems 결과" WorkbookPath="excel_data\WI_DT.xlsx">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[in_dtWorkItems]" DisplayName="6번만 테스트 할 때 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="642,65" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="dt_WorkItems 결과" WorkbookPath="excel_data\WI_DT.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:FilterDataTable DataTable="[in_dtWorkItems]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="704,201" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[in_dtWorkItems]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[in_dtWorkItems]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="642,65" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[in_dtWorkItems]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -159,12 +158,12 @@
       </ui:FilterDataTable.SelectColumns>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dtWorkItems]" DisplayName="필터링 확인용 | Write Range Workbook" sap:VirtualizedContainerService.HintSize="704,65" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="dt_WorkItems 결과필터링" WorkbookPath="excel_data\WI_DT.xlsx">
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dtWorkItems]" DisplayName="필터링 확인용 | Write Range Workbook" sap:VirtualizedContainerService.HintSize="642,65" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="dt_WorkItems 결과필터링" WorkbookPath="excel_data\WI_DT.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -172,13 +171,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="704,3259" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="642,1663" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="670,3002" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence sap:VirtualizedContainerService.HintSize="608,1406" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="blAlertDialog" />
               <Variable x:TypeArguments="x:Boolean" Name="blHash" />
@@ -188,28 +187,28 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dtWorkItems]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="608,2808" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dtWorkItems]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="546,1212" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="574,2604" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="512,1008" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="512,130" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentRow(&quot;Hash&quot;).ToString]" />
-                    <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="512,2284" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,130" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentRow(&quot;Hash&quot;).ToString]" />
+                    <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="450,688" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://acme-test.uipath.com/work-items/update/&quot;+CurrentRow(&quot;WIID&quot;).ToString]" Version="V3" />
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://acme-test.uipath.com/work-items/update/&quot;+CurrentRow(&quot;WIID&quot;).ToString]" Version="V3" />
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,65" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                         <ui:CommentOut.Body>
                           <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="556,430" sap2010:WorkflowViewState.IdRef="Sequence_19">
                             <sap:WorkflowViewStateService.ViewState>
@@ -239,7 +238,7 @@
                               <uix:NCheckState.Target>
                                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/99274069" CvTextArea="508, 387, 308, 13" CvTextArgument="a40b69d1f585e55121c27bed02b83b1cbe5e42e4" CvType="Text" DesignTimeRectangle="508, 387, 308, 13" DesignTimeScaleFactor="1" ElementType="Text" Guid="6e403d64-552c-45fd-9f5c-23a5795f24ce" InformativeScreenshot="4bc59c03f402e19125125503a41753f5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                                       <uix:Target CvTextArea="428, 387, 78, 13" CvTextArgument="Comments:" CvType="Text" DesignTimeRectangle="428, 387, 78, 13" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -261,102 +260,56 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:CommentOut>
-                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Hash값 입력 | Type Into 'TEXTAREA newComment'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Text="[CurrentRow(&quot;Hash&quot;).ToString]" Version="V3">
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA newComment'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,65" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Text="[CurrentRow(&quot;Hash&quot;).ToString]" Version="V3">
                         <uix:NTypeInto.Target>
                           <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/99274069" DesignTimeRectangle="429, 439, 1078, 54" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='newComment' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='newComment' tag='TEXTAREA' type='text' class='form-control' aaname='' /&gt;" Guid="2d2c32bb-8869-4564-a070-bfcfc9663cd7" ImageBase64="" InformativeScreenshot="835955075bb6e460728815b2eab595dd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
                         </uix:NTypeInto.Target>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NTypeInto>
-                      <If sap2010:Annotation.AnnotationText="Hash 코드가 Null 이나 빈값일 경우 Completed 버튼을 누르면 안됨" Condition="[String.IsNullOrEmpty(CurrentRow(&quot;Hash&quot;).ToString)]" DisplayName="Hash 빈값 예외처리 | If" sap:VirtualizedContainerService.HintSize="450,739" sap2010:WorkflowViewState.IdRef="If_6">
+                      <uix:NSelectItem DisplayName="Select Item '---'" sap:VirtualizedContainerService.HintSize="388,65" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Completed" ScopeIdentifier="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Version="V3">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                            <x:String>---</x:String>
+                            <x:String>Open</x:String>
+                            <x:String>Rejected</x:String>
+                            <x:String>Completed</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/99274069" DesignTimeRectangle="429, 533, 220, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' check:innerText='---' /&gt;" Guid="31b7ce08-f2b7-4bc0-9ea6-e203710efd0e" ImageBase64="" InformativeScreenshot="69ac4e0b8c480757e387a02cbf01efe4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,265" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <uix:NSelectItem DisplayName="Completed 선택 | Select Item '---'" sap:VirtualizedContainerService.HintSize="354,180" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Rejected" ScopeIdentifier="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Version="V3">
-                              <uix:NSelectItem.Items>
-                                <scg:List x:TypeArguments="x:String" Capacity="4">
-                                  <x:String>---</x:String>
-                                  <x:String>Open</x:String>
-                                  <x:String>Rejected</x:String>
-                                  <x:String>Completed</x:String>
-                                </scg:List>
-                              </uix:NSelectItem.Items>
-                              <uix:NSelectItem.Target>
-                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/99274069" DesignTimeRectangle="429, 533, 220, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' check:innerText='---' /&gt;" Guid="31b7ce08-f2b7-4bc0-9ea6-e203710efd0e" ImageBase64="" InformativeScreenshot="69ac4e0b8c480757e387a02cbf01efe4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
-                              </uix:NSelectItem.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NSelectItem>
-                          </Sequence>
-                        </If.Then>
-                        <If.Else>
-                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,265" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <uix:NSelectItem DisplayName="Completed 선택 | Select Item '---'" sap:VirtualizedContainerService.HintSize="354,180" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Completed" ScopeIdentifier="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Version="V3">
-                              <uix:NSelectItem.Items>
-                                <scg:List x:TypeArguments="x:String" Capacity="4">
-                                  <x:String>---</x:String>
-                                  <x:String>Open</x:String>
-                                  <x:String>Rejected</x:String>
-                                  <x:String>Completed</x:String>
-                                </scg:List>
-                              </uix:NSelectItem.Items>
-                              <uix:NSelectItem.Target>
-                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/99274069" DesignTimeRectangle="429, 533, 220, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' check:innerText='---' /&gt;" Guid="31b7ce08-f2b7-4bc0-9ea6-e203710efd0e" ImageBase64="" InformativeScreenshot="69ac4e0b8c480757e387a02cbf01efe4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
-                              </uix:NSelectItem.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NSelectItem>
-                          </Sequence>
-                        </If.Else>
-                      </If>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Update Work Item'" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Version="V3">
+                      </uix:NSelectItem>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Update Work Item'" sap:VirtualizedContainerService.HintSize="388,65" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0dcf7cb6-5f95-4c42-b0b2-e04059986ac4" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/99274069" DesignTimeRectangle="429, 582, 156, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='buttonUpdate' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonUpdate' tag='BUTTON' type='button' class='btn btn-default' aaname=' Update Work Item' check:innerText='Update Work Item' /&gt;" Guid="15139275-964d-4203-b33c-6cef32d5a09e" ImageBase64="" InformativeScreenshot="a5177b9a1c74d700ddc4369336ca6b57.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
                         </uix:NClick.Target>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NClick>
-                      <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="450,130" sap2010:WorkflowViewState.IdRef="Delay_4">
+                      <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="388,65" sap2010:WorkflowViewState.IdRef="Delay_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Delay>
-                      <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[blAlertDialog]" sap:VirtualizedContainerService.HintSize="450,147" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
+                      <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[blAlertDialog]" sap:VirtualizedContainerService.HintSize="388,65" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
                         <ui:UiElementExists.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a61ae2fe-ab7b-41b0-80b6-1ba77bb3acd6" InformativeScreenshot="e5ec96bf86590c265b73598ffc3ab34f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Chrome' /&gt;&lt;ctrl name='acme-test.uipath.com 내용:' role='dialog' /&gt;&lt;ctrl idx='2' role='pane' /&gt;">
                             <ui:Target.TimeoutMS>
@@ -369,15 +322,15 @@
                         </ui:UiElementExists.Target>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:UiElementExists>
-                      <If Condition="[blAlertDialog]" sap:VirtualizedContainerService.HintSize="450,498" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If Condition="[blAlertDialog]" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="If_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -403,7 +356,7 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <Assign sap:VirtualizedContainerService.HintSize="512,105" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">[blHash]</OutArgument>
                       </Assign.To>
@@ -415,7 +368,7 @@
                 </ActivityAction>
               </ui:ForEachRow.Body>
             </ui:ForEachRow>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="608,107" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://acme-test.uipath.com/work-items" Version="V3" />
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="546,107" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://acme-test.uipath.com/work-items" Version="V3" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -429,7 +382,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="704,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ACME_UpdateWorkItem 끝 &gt;&gt;&gt;&gt;&gt;&gt;&gt; &quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="642,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ACME_UpdateWorkItem 끝 &gt;&gt;&gt;&gt;&gt;&gt;&gt; &quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
