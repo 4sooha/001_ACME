@@ -1,16 +1,15 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="_04_ACME_Client정보추출" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="io_dtWorkItems" Type="InOutArgument(sd:DataTable)" />
-    <x:Property Name="in_CurrentRow" Type="InArgument(sd:DataRow)" />
     <x:Property Name="io_dicConfig" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="io_CurrentRow" Type="InArgument(sd:DataRow)" />
   </x:Members>
-  <this:_04_ACME_Client정보추출.in_CurrentRow>
+  <this:_04_ACME_Client정보추출.io_CurrentRow>
     <InArgument x:TypeArguments="sd:DataRow" />
-  </this:_04_ACME_Client정보추출.in_CurrentRow>
+  </this:_04_ACME_Client정보추출.io_CurrentRow>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1254,2217</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1254,2101</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_04_ACME_Client정보추출_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -128,7 +127,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_04_ACME_Client정보추출" sap:VirtualizedContainerService.HintSize="603,2152" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_04_ACME_Client정보추출" sap:VirtualizedContainerService.HintSize="603,2036" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strAccountInfo" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(of String)]" Name="listInfo" />
@@ -138,7 +137,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="541,181" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ACME Client 정보 추출 시작. .&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="541,65" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;ACME Client 정보 추출 시작. .&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="541,648" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="860a3f54-8009-40be-bba4-6c0695501315" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -151,7 +157,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[io_dicConfig(&quot;WorkItems_Url&quot;).ToString+&quot;/&quot;+in_CurrentRow(&quot;WIID&quot;).ToString]" Version="V3" />
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[io_dicConfig(&quot;WorkItems_Url&quot;).ToString+&quot;/&quot;+io_CurrentRow(&quot;WIID&quot;).ToString]" Version="V3" />
             <uix:NGetText DisplayName="Get Text 'Client ID:'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="860a3f54-8009-40be-bba4-6c0695501315" TextString="[strAccountInfo]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/98812833" DesignTimeRectangle="491, 332, 373, 60" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Client Information Details*' /&gt;&lt;webctrl tag='P' parentclass='col-lg-5' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Client Information Details*' /&gt;&lt;webctrl tag='P' parentclass='col-lg-5' type='' class='' aaname='                              BA92200                              Mayra Monzon                              France                         ' /&gt;" Guid="a7ee62db-7cf9-4d1b-87ac-d9bc590febfd" InformativeScreenshot="7f79a73f6fbee46b45e1e9aa85f0817e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
@@ -251,7 +257,7 @@
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:Object">[in_CurrentRow("Client ID")]</OutArgument>
+                <OutArgument x:TypeArguments="x:Object">[io_CurrentRow("Client ID")]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
                 <InArgument x:TypeArguments="x:Object">[strClientID]</InArgument>
@@ -259,7 +265,7 @@
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:Object">[in_CurrentRow("Client Name")]</OutArgument>
+                <OutArgument x:TypeArguments="x:Object">[io_CurrentRow("Client Name")]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
                 <InArgument x:TypeArguments="x:Object">[strClientName]</InArgument>
@@ -267,7 +273,7 @@
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:Object">[in_CurrentRow("Client Country")]</OutArgument>
+                <OutArgument x:TypeArguments="x:Object">[io_CurrentRow("Client Country")]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
                 <InArgument x:TypeArguments="x:Object">[strClientCountry]</InArgument>
