@@ -16,7 +16,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1254,1108</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1254,1093</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_03_결과파일생성_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,7 +113,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="_03_결과파일생성" sap:VirtualizedContainerService.HintSize="416,1043" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_03_결과파일생성" sap:VirtualizedContainerService.HintSize="416,1028" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -127,7 +127,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:WriteRange AddHeaders="True" DataTable="[in_dt_Input]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,156" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="확인용" WorkbookPath="[in_dicConfig(&quot;작업지시서&quot;).ToString]">
+    <ui:WriteRange AddHeaders="True" DataTable="[in_dt_Input]" DisplayName="확인용 | Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,156" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="확인용" WorkbookPath="[in_dicConfig(&quot;작업지시서&quot;).ToString]">
       <ui:WriteRange.StartingCell>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
@@ -140,7 +140,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="dt_Input : 이름, 수험번호, 시험과목, 합격여부&#xA;남기고&#xA;국어, 영어, 수학 삭제" DataTable="[in_dt_Input]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,258" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[in_dt_Input]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="이름, 수험번호, 시험과목, 합격여부 남기고&#xA;국어, 영어, 수학 삭제" DataTable="[in_dt_Input]" DisplayName="결과 컬럼 구성_편집 | Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[in_dt_Input]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -161,7 +161,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:WriteRange AddHeaders="False" DataTable="[in_dt_Input]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,156" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Output" StartingCell="A3:D17" WorkbookPath="[in_dicConfig(&quot;작업지시서&quot;).ToString]">
+    <ui:WriteRange AddHeaders="False" DataTable="[in_dt_Input]" DisplayName="개인별 결과 입력 | Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,156" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Output" StartingCell="A3:D17" WorkbookPath="[in_dicConfig(&quot;작업지시서&quot;).ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -169,7 +169,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <ui:WriteRange AddHeaders="False" DataTable="[in_dt_과목별결과]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,156" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Output" StartingCell="H3:H5" WorkbookPath="[in_dicConfig(&quot;작업지시서&quot;).ToString]">
+    <ui:WriteRange AddHeaders="False" DataTable="[in_dt_과목별결과]" DisplayName="과목별 결과 입력 | Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,156" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Output" StartingCell="H3:H5" WorkbookPath="[in_dicConfig(&quot;작업지시서&quot;).ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
